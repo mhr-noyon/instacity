@@ -1,0 +1,242 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    z-index: -2;
+    background-color: #FAFAFA;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+.col-6{
+    width: 50%;
+}
+.container{
+    display: flex;
+    width: 100%;
+}
+.content{
+    margin: 40px 0;
+    text-align: right;
+}
+.img1{
+    width: 280px;
+    z-index: -1;
+    background: url("images/pic1.jpg");
+    background-position: center;
+    background-size: 260px;
+    background-repeat: no-repeat;
+    transition: 5s;
+
+
+    animation: pic;
+    animation-duration: 25s;
+    animation-fill-mode: none;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+@keyframes pic {
+    0%{
+        background: url("images/pic1.jpg");
+        background-size: 250px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    25%{
+        background: url("images/pic2.jpg");
+        background-position: center;
+        background-size: 270px;
+        background-repeat: no-repeat;
+    }
+    50%{
+        background: url("images/pic3.jpg");
+        background-size: 270px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    75%{
+        background: url("images/pic4.jpg");
+        background-size: 270px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+    100%{
+        background: url("images/pic5.jpg");
+        background-size: 270px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+.img2{
+    margin: 10px;
+    width: 360px;
+    z-index: 2;
+}
+
+.content::after{
+    content: '';
+    clear: both;
+    display: table;
+}
+
+
+.login-content{
+    margin: 60px 20px;
+}
+.login-form{
+    width: 350px;
+    padding: 25px 30px;
+    text-align: center;
+    background-color: #FFFFFF;
+    border: 1px solid rgb(0, 0, 0,.2);
+}
+.login-form h1{
+    margin-bottom: 25px;
+    font-family: 'Pacifico', cursive;
+    font-weight: lighter;
+    opacity: 80%;
+}
+.login-form input{
+    padding: 10px 5px;
+    width: 100%;
+    margin: 5px 0;
+    border: 1px solid rgb(2, 2, 2,.15);
+    border-radius: 5px;
+    outline: none;
+}
+.login-form input:focus{
+    border: 1px solid rgb(2, 2, 2,.4);
+}
+.login-form button{
+    padding: 7px 5px;
+    width: 100%;
+    margin: 10px 0;
+    background-color: #B2DFFC;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-weight: bolder;
+}
+.login-form h3{
+    margin: 10px 0;
+    font-weight: bolder;
+    position: relative;
+    text-align: center;
+    opacity: 50%;
+}
+.login-form h3::before, .login-form h3::after{
+    content: '';
+    top: 11px;
+    position: absolute;
+    border-top: 1px solid;
+    height: 5px;
+    width: 44%;
+}
+.login-form h3::before{
+    right: 50%;
+    margin-right: 15px;
+}
+.login-form h3::after{
+    left: 50%;
+    margin-left: 15px;
+}
+.login-form p{
+    
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+.login-form p a{
+    font-weight: bold;
+    text-decoration: none;
+    color: #385185;
+}
+.login-form p a .fab{
+    margin-right: 5px;
+}
+.login-form small a{
+    text-decoration: none;
+    color: #385185;
+    font-size: 15px;
+}
+.signup-form{
+    width: 350px;
+    margin-top: 12px;
+    padding: 25px 40px;
+    text-align: center;
+    background-color: #FFFFFF;
+    border: 1px solid rgb(0, 0, 0,.2);
+}
+.signup-form a{
+    text-decoration: none;
+    color: #3e79f8;
+    font-weight: bold;
+}
+.get-app{
+    width: 350px;
+    text-align: center;
+    margin: 20px 0;
+}
+.login-content .img-div{
+    width: 350px;
+    padding: 0px 40px;
+    text-align: center;
+}
+.login-content .img-div img{
+    width: 130px;
+}
+select{
+    outline: none;
+    margin-bottom: 30px;
+}
+details{
+    background-color: cadetblue;
+    margin-bottom: 70px;
+}
+.footer{
+    padding: 10px;
+}
+
+
+
+
+
+
+@media screen and (max-width:991px) {
+    
+    [class*="col-"]{
+        width: 100%;
+    }
+    [class*="col-"]{
+        float: left;
+        padding: 0 10px;
+    }
+
+
+
+    .content{
+        display: none;
+    }
+    .login-content{
+        margin: 60px auto;
+    }
+    .login-form{
+        max-width: 320px;
+        margin: 25px auto;
+    }
+    .signup-form{
+        max-width: 320px;
+        margin: 0 auto;
+    }
+    .get-app{
+        max-width: 320px;
+        margin: 20px auto;
+    }
+    .login-content .img-div{
+        max-width: 320px;
+        margin: 0 auto;
+    }
+    .login-content .img-div img{
+        width: 110px;
+    }
+    
+}
